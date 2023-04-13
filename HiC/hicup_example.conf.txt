@@ -1,0 +1,58 @@
+#Example configuration file for the hicup Perl script - edit as required
+########################################################################
+
+#Directory to which output files should be written (optional parameter)
+#Set to current working directory by default 
+Outdir:./
+
+
+#Number of threads to use
+Threads: 10
+
+
+#Suppress progress updates (0: off, 1: on)
+Quiet:0
+
+
+#Retain intermediate pipeline files (0: off, 1: on)
+Keep:0
+
+
+#Compress outputfiles (0: off, 1: on)
+Zip:1
+
+
+#Path to the alignment program (Bowtie or Bowtie2)
+#Remember to include the executable Bowtie/Bowtie2 filename.
+#Note: ensure you specify the correct aligner i.e. Bowtie when 
+#using Bowtie indices, or Bowtie2 when using Bowtie2 indices. 
+#In the example below Bowtie2 is specified.
+Bowtie2:/home/software/bwa-0.7.17
+
+
+#Path to the reference genome indices
+#Remember to include the basename of the genome indices
+Index: Bioinfo/bio_2022_2023_2/bio_nchen/Reference/Mus_musculus.GRCm39.dna.primary_assembly.fa 
+
+
+#Path to the genome digest file produced by hicup_digester
+Digest: ./Digest_GRCm39_HindIII_None_09-29-12_22-03-2023.txt
+
+
+#FASTQ format (valid formats: 'Sanger', 'Solexa_Illumina_1.0', 'Illumina_1.3' or 'Illumina_1.5')
+#If not specified, HiCUP will try to determine the format automatically by analysing
+#one of the FASTQ files. All input FASTQ will assumed to be in this format
+Format: Sanger 
+
+
+#Maximum di-tag length (optional parameter)
+Longest: 700
+
+
+#Minimum di-tag length (optional parameter)
+Shortest: 50
+
+
+#FASTQ files to be analysed, placing paired files on adjacent lines
+/Bioinfo/bio_2022_2023_2/bio_nchen/hic/SRR11041269_1.fastq.gz
+/Bioinfo/bio_2022_2023_2/bio_nchen/hic/SRR11041269_2.fastq.gz
