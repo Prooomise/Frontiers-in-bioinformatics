@@ -7,7 +7,7 @@ img {
 
 # ATAC-seq分析
 
-####对于ATAC-seq的分析流程，ChatGPT说：
+#### 对于ATAC-seq的分析流程，ChatGPT说：
 1. 质控和数据预处理：这个步骤用于对原始数据进行质量控制和预处理。例如，可以使用FastQC软件对原始数据进行质量评估，然后使用Trimmomatic软件对低质量序列进行过滤和修剪。
 2. 对参考基因组进行比对：使用Bowtie2、BWA-MEM、STAR等软件将ATAC-seq测序reads比对到参考基因组上，生成.bam格式的比对文件。
 3. 去除PCR扩增引入的偏差：由于PCR扩增过程中会引入偏差，因此需要使用Picard、samtools等工具去除PCR扩增引入的重复序列。
@@ -31,6 +31,7 @@ img {
    |-t|--nthreads=NTHREADS|
    |-l|--compression-level=N|
    |-p|--show-progress|
+   
    结果：
    ![](./img/2023-03-15-11-01-34.png)
    其实`picard`也可以做到，指令是
