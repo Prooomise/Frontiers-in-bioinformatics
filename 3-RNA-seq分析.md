@@ -1,10 +1,3 @@
-<style>
-img {
-  width: 80%;
-  padding-left: 10%
-    }
-</style>
-
 # RNA-seq分析
 
 1. __上游分析__
