@@ -1,10 +1,3 @@
-<style>
-img {
-  width: 75%;
-  padding-left: 12.5%
-    }
-</style>
-
 # ATAC-seq分析
 
 #### 对于ATAC-seq的分析流程，ChatGPT说：
