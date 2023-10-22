@@ -1,11 +1,3 @@
-<style>
-img {
-  width: 70%;
-  padding-left: 15%
-    }
-</style>
-
-
 # HiC分析流程
 
 ### HiCUP进行HiC数据的预处理
