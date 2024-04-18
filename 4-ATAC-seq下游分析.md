@@ -96,9 +96,9 @@
    ![](./img/2023-03-16-21-15-05.png)
 
 6. __利用`MEME ChIP`可视化结果__
+
    这是一个有交互页面的寻找MEME的toolkit
    可能需要比较久，记得留下邮箱
-<br>
 
 7. __利用`ChIPseeker`进行注释__
    ```r
@@ -120,9 +120,8 @@
    plotDistToTSS(peakAnno)
    dev.off()
    ```
-<br>
 
-7. __利用`DiffBind`进行比较__
+8. __利用`DiffBind`进行比较__
    确定样本之间有差异的位点。它包括支持峰集处理的功能，包括重叠和合并峰集，在峰集里进行重叠区间的测序read计数，以及基于结合亲和的证据(通过read密度的差异测定)识别统计上显著的差异结合位点。
    流程包括：读取峰集、occupancy分析、reads计数、差异接合分析
    捏一个Sample.csv
@@ -155,7 +154,7 @@
    + cex = 0.75)) + abline(v=c(-1,1), lty = "dotted") + abline(h=-log10(0.05), lty = dotted")
    ```
 
-8. __绘制Profile图__
+9. __绘制Profile图__
    ```sh
    samtools index SRR23404191_redup.bam
    bamCoverage -b SRR23404191_redup.bam  -o SRR23404191.bw
