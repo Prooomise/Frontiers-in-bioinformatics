@@ -34,7 +34,8 @@
 <br>
 
 2. __利用`MACS2`进行peak calling__
-   [MACS2简明教程](https://www.jianshu.com/p/21e8c51fca23)
+
+   可以查看[MACS2简明教程](https://www.jianshu.com/p/21e8c51fca23)
    安装
    ```sh
    pip install macs2
@@ -72,7 +73,8 @@
    macs3 callpeak --nomodel -B -f BAMPE -t SRR23404191.bam -n 4191callpeak --nolambda --gsize mm 
    ```
 
-3. __使用bedtools把有peak的fastq拎出来__
+4. __使用bedtools把有peak的fastq拎出来__
+
    首先需要用samtools对索引排序
    ```sh
    samtools faidx /Bioinfo/bio_2022_2023_2/bio_nchen/Reference/Mus_musculus.GRCm39.dna.primary_assembly.fa
@@ -83,7 +85,7 @@
    > bedtools getfasta -fi /Bioinfo/bio_2022_2023_2/bio_nchen/Reference/Mus_musculus.GRCm39.dna.primary_assembly.fa -fo SRR23404191.fa -bed SRR23404191.bed
    ```
 
-4. __使用`picard`统计结果中insertsize长度的分布__
+5. __使用`picard`统计结果中insertsize长度的分布__
    ```sh
    picard CollectInsertSizeMetrics \
         I=sorted.mkdup.bam \   # 比对后取出pcr重复后的bam文件
@@ -93,12 +95,12 @@
    结果：感觉很烂，但是勉勉强强做下去吧
    ![](./img/2023-03-16-21-15-05.png)
 
-5. __利用`MEME ChIP`可视化结果__
+6. __利用`MEME ChIP`可视化结果__
    这是一个有交互页面的寻找MEME的toolkit
    可能需要比较久，记得留下邮箱
 <br>
 
-6. __利用`ChIPseeker`进行注释__
+7. __利用`ChIPseeker`进行注释__
    ```r
    library(ChIPseeker)
    library(GenomicFeatures)
