@@ -33,9 +33,10 @@
     |-D|< int >	最长的fragmen，默认是600|
     |-f|如果-f被设置，那将会统计feature层面的数据，如exon-level，否则会统计meta-feature层面的数据，如gene-levels|
     |__-g `<string>`__|当参考的gtf提供的时候，我们需要提供一个id identifier 来将feature水平的统计汇总为meta-feature水平的统计，默认为gene_id，注意！选择gtf中提供的id identifier！！！|
-    |__-t `<string>`__|设置feature-type，-t指定的必须是gtf中有的feature，同时read只有落到这些feature上才会被统计到，默认是“exon”|
+    |__-t `<string>`__|设置feature-type，-t指定的必须是gtf中有的feature，同时read只有落到这些feature上才会被统计到，默认是“exon”
+   如果不确定可以打开gtf看看到底是什么类型|
 
-2. 下游分析
+3. 下游分析
    __利用`DESeq2`进行下游分析__
    安装`DESeq2`:
    ```R
