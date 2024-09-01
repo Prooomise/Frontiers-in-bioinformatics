@@ -52,6 +52,8 @@
     BiocManager::install("org.Mm.eg.db")
    ```
 === 开始分析 ===
+
+
   首先把数据读进来，构建正确的、可以使用的表达矩阵
   ```R
   countData5824 <- read.table("SRR23405824countResult.txt", sep = "\t", header = TRUE, row.names=1)
