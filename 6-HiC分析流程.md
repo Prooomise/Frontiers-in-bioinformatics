@@ -4,6 +4,8 @@
    ![](./img/2023-03-22-08-34-33.png)
    [参考手册](https://www.bioinformatics.babraham.ac.uk/projects/hicup/read_the_docs/html/index.html)
 1. __`hicup_digester`构建参考基因组__
+
+
    HiCUP Digester通过指定Type II限制性内切酶来切割参考基因组(模拟酶切)，从而生成整个参考基因组的酶切位点文件，其作为HiCUP Filter的输入文件对HiC数据进一步过滤。
    ```sh
    hicup_digester --genome reference_name --re1 A^AGCTT,HindIII input_path/refence.fa --outdir outdir/
@@ -24,7 +26,7 @@
    用bowtie建立的索引会有六个结果文件，四个.bt2文件，两个rev.bt2文件。
 <br>
 
-2. __生成配置文件__
+3. __生成配置文件__
    ```sh
    hicup --example
    vim hicup_example.conf
