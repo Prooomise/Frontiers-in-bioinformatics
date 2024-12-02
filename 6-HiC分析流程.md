@@ -1,5 +1,9 @@
 # HiC分析流程
 
+### 4DN推荐分析流程
+若为HiC及其衍生实验，使用`bwa`比对后利用`pairtools`提取染色质交互对，接着使用`cooler`生成.cool文件，再用`hiccups`进行loop calling。<br>
+若为ChIA-PET及其衍生实验，则使用ChIA-PET Tools V3完成数据处理，生成染色质交互簇
+
 ### HiCUP进行HiC数据的预处理
    ![](./img/2023-03-22-08-34-33.png)
    [参考手册](https://www.bioinformatics.babraham.ac.uk/projects/hicup/read_the_docs/html/index.html)
