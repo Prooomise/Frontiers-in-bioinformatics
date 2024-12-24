@@ -89,7 +89,7 @@
   ```
   绘制火山图
   ```R
-  threshold <- as.factor(ifelse(resdata$padj < 0.001 & 
+resdata$threshold <- as.factor(ifelse(resdata$padj < 0.001 & 
                                   abs(resdata$log2FoldChange) >= 2 ,
                                 ifelse(resdata$log2FoldChange >= 2 ,
                                       'Up','Down'),'None')) 
