@@ -85,7 +85,7 @@
    > bedtools getfasta -fi /Bioinfo/bio_2022_2023_2/bio_nchen/Reference/Mus_musculus.GRCm39.dna.primary_assembly.fa -fo SRR23404191.fa -bed SRR23404191.bed
    ```
 
-5. __使用`picard`统计结果中insertsize长度的分布__
+5. __使用`picard`统计结果中insertsize长度的分布__ <br>
    ```sh
    picard CollectInsertSizeMetrics \
         I=sorted.mkdup.bam \   # 比对后取出pcr重复后的bam文件
@@ -95,12 +95,12 @@
    结果：感觉很烂，但是勉勉强强做下去吧
    ![](./img/2023-03-16-21-15-05.png)
 
-6. __利用`MEME ChIP`可视化结果__
+6. __利用`MEME ChIP`可视化结果__ 
 
-   这是一个有交互页面的寻找MEME的toolkit
+   这是一个有交互页面的寻找MEME的toolkit<br>
    可能需要比较久，记得留下邮箱
 
-7. __利用`ChIPseeker`进行注释__
+7. __利用`ChIPseeker`进行注释__ <br>
    ```r
    library(ChIPseeker)
    library(GenomicFeatures)
@@ -121,10 +121,10 @@
    dev.off()
    ```
 
-8. __利用`DiffBind`进行比较__
-   确定样本之间有差异的位点。它包括支持峰集处理的功能，包括重叠和合并峰集，在峰集里进行重叠区间的测序read计数，以及基于结合亲和的证据(通过read密度的差异测定)识别统计上显著的差异结合位点。
-   流程包括：读取峰集、occupancy分析、reads计数、差异接合分析
-   捏一个Sample.csv
+8. __利用`DiffBind`进行比较__ <br>
+   确定样本之间有差异的位点。它包括支持峰集处理的功能，包括重叠和合并峰集，在峰集里进行重叠区间的测序read计数，以及基于结合亲和的证据(通过read密度的差异测定)识别统计上显著的差异结合位点。<br>
+   流程包括：读取峰集、occupancy分析、reads计数、差异接合分析<br>
+   捏一个Sample.csv<br>
    ![](./img/2023-04-09-10-07-21.png)
    ```R
    data <- dba(sampleSheet='Sample.csv', dir="/Bioinfo/bio_2022_2023_2/bio_nchen/ATAC-analysis/")
