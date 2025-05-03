@@ -70,6 +70,14 @@
 
    但其实用了 __`MACS3`__ ，指导手册见[GitHub](https://github.com/macs3-project/MACS/blob/master/docs/callpeak.md)
    ```sh
+   conda create -n macs3 python == 3.9
+   conda activate macs3
+   conda install numpy cython
+
+   pip intsall macs3
+   ```
+   
+   ```sh
    macs3 callpeak --nomodel -B -f BAMPE -t SRR23404191.bam -n 4191callpeak --nolambda --gsize mm 
    ```
 
