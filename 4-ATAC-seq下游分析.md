@@ -68,7 +68,7 @@
    |-q|设定q值(最小的FDR)的阈值，默认0.05。可以根据结果进行修正。q值是p值经Benjamini–Hochberg–Yekutieli修正后的值。更多关于q值的设定参考官方手册或[使用指南](https://www.jianshu.com/p/6a975f0ea65a)，一般都使用默认，默认效果不好再调整|
    |-g|表示使用什么基因组|
 
-   但其实用了 __`MACS3`__ ，指导手册见[GitHub](https://github.com/macs3-project/MACS/blob/master/docs/callpeak.md)
+   但其实用了 __`MACS3`__ ，指导手册见[GitHub](https://github.com/macs3-project/MACS/blob/master/docs/source/docs/callpeak.md)
    ```sh
    conda create -n macs3 python == 3.9
    conda activate macs3
