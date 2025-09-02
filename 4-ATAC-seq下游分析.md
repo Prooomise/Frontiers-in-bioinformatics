@@ -90,6 +90,7 @@
    `awk`+`bedtools`提取序列
    ```sh
    > awk '{print $1"\t" $2"\t" $3}' ./4203callpeak_peaks.narrowPeak > SRR23404203.bed
+   > #awk '{print "chr"$1"\t" $2"\t" $3}' ./4203callpeak_peaks.narrowPeak > SRR23404203.bed
    > bedtools getfasta -fi /Bioinfo/bio_2022_2023_2/bio_nchen/Reference/Mus_musculus.GRCm39.dna.primary_assembly.fa -fo SRR23404191.fa -bed SRR23404191.bed
    ```
 
@@ -173,3 +174,4 @@
    ```
 
    
+
