@@ -27,6 +27,7 @@
    
    结果：
    ![](./img/2023-03-15-11-01-34.png)
+   
    其实`picard`也可以做到，指令是
    ```sh
    picard MarkDuplicates REMOVE_DUPLICATES=True I=SRR23404204.bam O=SRR23404204_dedup.bam M=SRR23404204_dedup.txt
@@ -174,4 +175,5 @@
    ```
 
    
+
 
